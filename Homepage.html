@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <style>
+        
+        .navbar {
+            position: absolute;
+            padding: 10px;
+            right: 2px;
+            height: 88px;
+            width: 550px;
+            background: rgba(255, 255, 255, 0); 
+            border-radius: 10px;
+            backdrop-filter: blur(0px); /* Initially no blur */
+            transition: backdrop-filter 0.5s ease-in-out, background 0.5s ease-in-out;
+            display:flex;
+            flex-direction:row;
+            transition:1s ease;
+
+        }
+
+        .navbar:hover {
+            background: rgba(177, 177, 177, 0.3); /* Slightly visible background */
+            backdrop-filter: blur(10px); /* Blur effect applied on hover */
+
+        }
+        .navbar > div{
+            padding:35px;
+            justify-content:center;
+            transition:1s ease;
+
+        }
+        .navbar > div:hover{
+            background-color:rgba(151, 151, 151, 0.3);
+            transition:1s ease;
+
+        }
+
+
+        .mainheading{         
+            font-size: 50px;
+            position:relative;
+        }
+        .ARE{
+            position:absolute;
+            
+            animation: slide-down1 1s ease;
+            transition:1s ease;
+            top: 10px;
+            
+            
+        }
+        .YOU{
+            position:absolute;
+            left:250px; 
+            animation: slide-down2 2s ease;
+            transition:1s ease;
+            top: 10px;
+            
+        }
+        .READY{
+            position:absolute;
+            left: 500px;
+            animation: slide-down3 3s ease;
+            transition:1s ease;
+            top:10px;
+            
+        }
+
+        
+        @keyframes slide-down1{
+            0%{
+                top: 40px;
+               
+            }
+            100%{
+                top: 10px;
+                
+            }
+        }
+        @keyframes slide-down2{
+            0%{
+                top: 60px;
+
+            }
+            100%{
+                top: 10px;
+                
+            }
+        }
+        @keyframes slide-down3{
+            0%{
+                top: 100px;
+
+            }
+            100%{
+                top: 10px;
+            }
+        }
+        @keyframes fade-in{
+            0%{
+                opacity:0;
+            }
+            100%{
+                opacity:1;
+            }
+        }
+        .Experience{
+            
+            position:absolute;
+            top:175px;
+            animation: fade-in 4s ease-in;
+            transform: 1s ease;
+            
+        }
+        .ListHead{
+            font-size: 40px;
+            width:auto;
+            height:auto;
+            
+            background-color:rgb(157, 157, 157,0.4);
+            
+            
+            position:absolute;
+            top:680px;
+            left:24%;
+            
+            
+        }
+        .citygrid {
+            position: absolute;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            width: 100%;
+            top: 900px;            
+            background: transparent; 
+        }
+
+        
+
+
+        .column{
+            display:flex;
+            justify-content: center;
+            
+            
+        }
+        .column > div{
+            text-align:center;
+            height:100%;
+            width:100%;
+            justify-content: center;
+            
+            border-radius:20px;
+            overflow:hidden;
+            display:flex;
+            flex-direction:column;
+            transition:1s ease;
+        }
+        .column > div:hover{
+            transform:translateY(-5%) translateX(-1%);
+            transition:1s ease;
+            padding:3px;
+            border: solid black;
+            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.8);
+            
+        }
+        .column > .ProfileImage{
+            flex-grow:1;
+        }
+        .column > .introtext{
+            flex-grow:3;
+        }
+        .ProfileImage img {
+            max-width: 100%;
+            height: 300px;
+            padding: 10px;
+            opacity: 0;
+            border-radius: 20px;
+            transition: opacity 1.2s ease; 
+        }
+
+        .ProfileImage:hover img {
+            opacity: 1; 
+        }
+
+        
+        .introtext{
+            background-color: rgba(173, 173, 173, 0.4);
+
+            transition:1s ease;
+        }
+        .introtext:hover{
+            border-radius: 15px;
+            background-color: rgba(173, 173, 173, 0.8);
+            transition:1s ease;
+        }
+        
+        .Banaras {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+                url('https://wallpapercave.com/wp/wp7148051.jpg') center/cover no-repeat;
+}
+
+        .Agra {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+                        url('https://wallpapercave.com/wp/wp4909615.jpg') center/cover no-repeat;
+        }
+
+        .Darjeeling {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+                        url('https://siliguritourism.com/wp-content/uploads/2024/01/Darjeeling-West-Bengal.jpg') center/cover no-repeat;
+        }
+
+        .Khajuraho {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+                        url('https://thefloatingpebbles.com/wp-content/uploads/2023/03/22-10-03-MP22-90-1024x869.jpg') center/cover no-repeat;
+        }
+
+        .Cochi {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+                        url('https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0d/de/f0/eb/backwater-tourism.jpg?w=700&h=-1&s=1') center/cover no-repeat;
+        }
+
+        .Mysuru {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0.5, 0.5)), 
+                        url('https://karnatakatourism.org/wp-content/uploads/2020/05/G26.jpg') center/cover no-repeat;
+        }
+        
+
+        p{
+            font-size: 20px;
+        }
+        .CityName{
+            background-color:  rgba(173, 173, 173, 0.4);
+            position:relative;
+            left:28%;
+            width:40%;
+            height:auto;
+            transition:1s ease;
+        }
+        .CityName:hover{
+            background-color: rgba(173, 173, 173, 0.8);
+            transition:1s ease;
+        }
+        .Logu{
+            
+            position:absolute;
+            
+            top:245px;
+            
+        }
+        .Logu img{
+            height:269px;
+            animation:fade-in 5s ease;
+            
+        }
+        a{
+                text-decoration:none;
+                color:black;
+                transition: 1s ease;
+        }    
+    </style>
+</head>
+<body style="background-image: url('https://wallpapercave.com/wp/wp2664172.jpg'); background-repeat:repeat-y;">
+    <div class="navbar">
+            
+            <div class="Home">
+                <a href="Homepage.html">Home</a>
+            </div>
+            <div class="Heritage">
+                <a href="Heritage.html">Heritage</a>
+            </div>
+            <div class="Hotel Booking">
+                <a href="Hotel.html">Hotel Booking</a>
+            </div>
+            <div class="Gallery">
+                <a href="Gallery.html">Gallery</a>
+            </div>
+
+            
+    </div>
+    <div class="Logu">
+        <img src="Logo.png">
+    </div>
+    <div class="mainheading">
+            <div class="ARE">
+                    <h1>ARE</h1>
+            </div>
+            <div class="YOU">
+                    <h1>YOU</h1>
+            </div>
+            <div class="READY">
+                    <h1>READY?</h1>
+            </div>
+            
+    </div>
+    <div class="Experience">
+        
+        <h1>To experience the REAL India</h1>
+    </div>
+    <div class="ListHead">
+        <h1>Heritage Cities In India</h1>
+    </div>
+    <div class="citygrid">
+        <div class="column">
+            <div class="Banaras">
+                <div class="CityHeader">
+                    <div class="CityName"><h2>Banaras</h2></div>
+                </div>
+                <a href="Banaras.html">
+                    <div class="ProfileImage">
+                        <img src="https://www.learnreligions.com/thmb/9X3gLTQoakHFwLcKOxGPGWtm924=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/evening-at-varanasi-610625330-58e54bd25f9b58ef7e7c8bb9.jpg">
+                    </div>
+                </a>
+                <div class="introtext">
+                    <p>Varanasi, India’s spiritual capital, is famous for its ancient temples, sacred Ganges River, and vibrant ghats. A hub of Hindu culture, it attracts pilgrims, scholars, and tourists seeking history, rituals, and peace.</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="column">
+            <div class="Agra">
+                <div class="CityHeader">
+                    <div class="CityName"><h2>Agra</h2></div>
+                </div>
+                <a href="Agra.html">
+                    <div class="ProfileImage">
+                        <img src="https://wallpapercave.com/wp/wp2037798.jpg">
+                    </div>
+                </a>
+                <div class="introtext">
+                    <p>Agra, home to the iconic Taj Mahal, is a city of Mughal grandeur. With historic forts, stunning marble artistry, and vibrant markets, it attracts millions of tourists seeking timeless beauty and culture.</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="column">
+            <div class="Darjeeling">
+                <div class="CityHeader">
+                    <div class="CityName"><h2>Darjeeling</h2></div>
+                </div>
+                <a href="Darjeeling.html">
+                    <div class="ProfileImage">
+                        <img src="https://wallpapercave.com/wp/wp6191533.jpg">
+                    </div>
+                </a>
+                <div class="introtext">
+                    <p>Darjeeling, nestled in the Himalayas, is famous for its tea gardens, colonial charm, and breathtaking Kanchenjunga views. The heritage toy train and misty landscapes make it a paradise for travelers and nature lovers.</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="column">
+            <div class="Khajuraho">
+                <div class="CityHeader">
+                    <div class="CityName"><h2>Khajuraho</h2></div>
+                </div>
+                <a href="Khajuraho.html">
+                    <div class="ProfileImage">
+                        <img src="https://wallpapercave.com/wp/wp14691097.jpg">
+                    </div>
+                </a>
+                <div class="introtext">
+                    <p>Khajuraho is renowned for its ancient temples adorned with intricate sculptures. A UNESCO World Heritage Site, it showcases India’s rich cultural and artistic heritage, attracting history enthusiasts and architectural admirers worldwide.</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="column">
+            <div class="Cochi">
+                <div class="CityHeader">
+                    <div class="CityName"><h2>Kochi</h2></div>
+                </div>
+                <a href="Kochi.html">
+                    <div class="ProfileImage">
+                        <img src="https://wallpapercave.com/wp/wp14317786.jpg">
+                    </div>
+                </a>
+                <div class="introtext">
+                    <p>Kochi, the Queen of the Arabian Sea, blends colonial history, serene backwaters, and vibrant culture. Famous for Chinese fishing nets, spice markets, and scenic beauty, it’s a major tourist destination in Kerala.</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="column">
+            <div class="Mysuru">
+                <div class="CityHeader">
+                    <div class="CityName"><h2>Mysore</h2></div>
+                </div>
+                <a href="Mysore.html">
+                    <div class="ProfileImage">
+                        <img src="https://wallpapercave.com/wp/wp4727302.jpg">
+                    </div>
+                </a>
+                <div class="introtext">
+                    <p>Mysore, Karnataka’s cultural gem, is known for its grand Mysore Palace, rich heritage, and Dasara festival. With sandalwood, silk, and royal history, it remains a favorite destination for history buffs and travelers.</p>
+                </div>
+            </div>
+        </div>
+        
+        
+        
+            
+                        
+        
+    </div>
+    
+</body>
+</html>

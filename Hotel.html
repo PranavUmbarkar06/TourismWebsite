@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .navbar {
+            position: absolute;
+            padding: 10px;
+            right: 2px;
+            height: 88px;
+            width: 550px;
+            background: rgba(255, 255, 255, 0); 
+            border-radius: 10px;
+            backdrop-filter: blur(0px); /* Initially no blur */
+            transition: backdrop-filter 0.5s ease-in-out, background 0.5s ease-in-out;
+            display:flex;
+            flex-direction:row;
+            transition:1s ease;
+
+        }
+
+        .navbar:hover {
+            background: rgba(177, 177, 177, 0.3); /* Slightly visible background */
+            backdrop-filter: blur(10px); /* Blur effect applied on hover */
+
+        }
+        .navbar > div{
+            padding:35px;
+            justify-content:center;
+            transition:1s ease;
+
+        }
+        .navbar > div:hover{
+            background-color:rgba(151, 151, 151, 0.3);
+            transition:1s ease;
+
+        }
+        a{
+                text-decoration:none;
+                color:black;
+                transition: 1s ease;
+        }
+    </style>
+    <title>Hotel Booking</title>
+</head>
+<body>
+    <div class="navbar">
+            
+        <div class="Home">
+            <a href="Homepage.html">Home</a>
+        </div>
+        <div class="Heritage">
+            <a href="Heritage.html">Heritage</a>
+        </div>
+        <div class="Hotel Booking">
+            <a href="Hotel.html">Hotel Booking</a>
+        </div>
+        <div class="Gallery">
+            <a href="Gallery.html">Gallery</a>
+        </div>
+
+        
+    </div>
+</body>
+</html>
